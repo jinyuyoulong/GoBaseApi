@@ -1,4 +1,4 @@
-module xxx.com/projectweb
+module project-api
 
 go 1.12
 

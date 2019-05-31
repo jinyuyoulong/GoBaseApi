@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/kataras/iris"
-	"xxx.com/projectweb/src/app/bootstrap/route"
-	"xxx.com/projectweb/src/app/config"
-	"xxx.com/projectweb/src/app/config/diserver"
+	"project-api/src/app/bootstrap/route"
+	"project-api/src/app/config"
+	"project-api/src/app/bootstrap/diserver"
 )
 
 func main() {

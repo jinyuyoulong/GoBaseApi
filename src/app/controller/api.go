@@ -7,11 +7,11 @@ import (
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/mvc"
 
-	"xxx.com/projectweb/src/app/bootstrap/service"
-	"xxx.com/projectweb/src/app/config"
-	"xxx.com/projectweb/src/app/config/diserver"
-	"xxx.com/projectweb/src/app/library/datasource"
-	"xxx.com/projectweb/src/app/models"
+	"project-api/src/app/bootstrap/service"
+	"project-api/src/app/config"
+	"project-api/src/app/bootstrap/diserver"
+	"project-api/src/app/library/datasource"
+	"project-api/src/app/models"
 )
 
 // APIController index controller

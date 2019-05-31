@@ -3,7 +3,7 @@ package route
 import (
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/mvc"
-	"xxx.com/projectweb/src/app/controller"
+	"project-api/src/app/controller"
 )
 
 // Configure registers the necessary routes to the app.

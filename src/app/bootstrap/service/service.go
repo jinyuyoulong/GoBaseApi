@@ -2,9 +2,9 @@ package service
 
 // HTTP request 访问控制层
 import (
-	"xxx.com/projectweb/src/app/library/dao"
-	"xxx.com/projectweb/src/app/library/datasource"
-	"xxx.com/projectweb/src/app/models"
+	"project-api/src/app/library/dao"
+	"project-api/src/app/library/datasource"
+	"project-api/src/app/models"
 )
 
 type ProjectapiService interface {

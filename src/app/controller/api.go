@@ -7,10 +7,10 @@ import (
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/mvc"
 
-	"project-api/src/app/bootstrap/service"
-	"project-api/src/app/config"
 	"project-api/src/app/bootstrap/diserver"
+	"project-api/src/app/bootstrap/service"
 	"project-api/src/app/library/datasource"
+	"project-api/src/app/library/helper"
 	"project-api/src/app/models"
 )
 
@@ -23,16 +23,19 @@ const (
 	commonTitle string = "测试资料库"
 )
 
+//  使用DI 中的数据
+func useContainer() {
+	// 测试外部文件 获取 config 数据
+	container := diserver.GetDI().Container
+	container.Invoke(func(helper *helper.Helper) {
+		println("测试外部文件 获取 config 数据", helper.NewConfig().Get("database.dirver").(string))
+	})
+}
+
 // Get /
 func (c *APIController) Get(ctx iris.Context) {
 	Service := service.NewprojectapiService()
 	datalist := Service.GetAll()
-
-	// 测试外部文件 获取 config 数据
-	container := diserver.GetDI().Container
-	container.Invoke(func(config *config.Config) {
-		println("测试外部文件 获取 config 数据", config.New().Get("database.dirver").(string))
-	})
 
 	ctx.JSON(ApiResult(true, datalist, ""))
 }
@@ -74,12 +77,6 @@ func (c *APIController) GetIndexHandler(ctx iris.Context) {
 func (c *APIController) GetUser(ctx iris.Context) {
 	Service := service.NewUserService()
 	datalist := Service.GetAll()
-
-	// 测试外部文件 获取 config 数据
-	container := diserver.GetDI().Container
-	container.Invoke(func(config *config.Config) {
-		println("测试外部文件 获取 config 数据", config.New().Get("database.dirver").(string))
-	})
 
 	ctx.JSON(ApiResult(true, datalist, ""))
 }

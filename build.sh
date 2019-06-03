@@ -1,3 +1,4 @@
+#!/bin/sh
 cd bin
-go build ../src/main/projectweb.go
-./projectweb
+go build ../src/main/project-api.go
+./project-api

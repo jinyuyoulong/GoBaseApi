@@ -14,10 +14,8 @@ func APIRoute(route *iris.Application) {
 	api.Handle(apiC)
 
 	// -------------------------------------------------------
-	route.Get("/setroute", apiC.GetIndexHandler)
-	route.Get("/user", apiC.GetUser)
-	// a.Get("/follower/{id:long}", indexC.GetFollowerHandler)
-	// b.Get("/like/{id:long}", GetLikeHandler)
+	route.Get("/api/setroute", apiC.GetIndexHandler)
+	route.Get("/api/user", apiC.GetUser)
 }
 
 // SetRoute 配置路由
